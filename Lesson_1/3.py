@@ -6,12 +6,19 @@ y1 = int(input('y1:'))
 x2 = int(input('x2:'))
 y2 = int(input('y2:'))
 
-k = (y2 - y1)/(x2 - x1)
-b = y1 - (x1*(y2 - y1))/(x2 - x1)
+if x1 != x2 and y1 != y2:
 
-if b == 0:
-    print(f'Уравнение прямой: y = {k:.2f}x')
-elif b > 0:
-    print(f'Уравнение прямой: y = {k:.2f}x + {b:.2f}')
+    k = (y2 - y1)/(x2 - x1)
+    b = y1 - (x1*(y2 - y1))/(x2 - x1)
+
+    if b == 0:
+        print(f'Уравнение прямой: y = {k:.2f}x')
+    elif b > 0:
+        print(f'Уравнение прямой: y = {k:.2f}x + {b:.2f}')
+    else:
+        print(f'Уравнение прямой: y = {k:.2f}x - {-b:.2f}')
 else:
-    print(f'Уравнение прямой: y = {k:.2f}x - {-b:.2f}')
+    if y1 == y2:
+        print(f'Уравнение прямой: y = {y1}')
+    else:
+        print(f'Уравнение прямой: x = {x1}')
