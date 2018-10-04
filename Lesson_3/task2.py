@@ -11,6 +11,6 @@ list_2 = []
 for i, item in enumerate(list_1):
 
     if item % 2 == 0:
-        list_2 += [i]
+        list_2.append(i)
 
 print('Индексы четных значений: ', list_2)

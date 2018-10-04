@@ -2,10 +2,13 @@
 
 import random
 
-list_1 = [random.randint(-1000, 1000) for _ in range(10)]
+START = -1000
+STOP = 1000
+
+list_1 = [random.randint(START, STOP) for _ in range(10)]
 print(list_1)
 
-maximum = -1000
+maximum = START
 
 for i, item in enumerate(list_1):
 

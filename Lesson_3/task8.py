@@ -3,13 +3,15 @@
 
 print('Заполним матрицу 4х4. Вводите элементы по одному.')
 
-matrix = [[i for i in range(4)] for _ in range(4)]
+SIZE = 4
+
+matrix = [[None for i in range(SIZE)] for _ in range(SIZE)]
 i = 0
 
-while i <= 3:
+while i < SIZE:
     n = 0
 
-    while n <= 3:
+    while n < SIZE:
         matrix[i][n] = int(input(f'Ряд {i+1}, ячейка {n+1}:'))
         n += 1
 

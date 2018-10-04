@@ -3,11 +3,14 @@
 
 import random
 
-list_1 = [random.randint(0, 100) for _ in range(10)]
+START = 0
+STOP = 100
+
+list_1 = [random.randint(START, STOP) for _ in range(10)]
 print(list_1)
 
-maximum = 0
-minimum = 100
+maximum = START
+minimum = STOP
 
 for i, item in enumerate(list_1):
 

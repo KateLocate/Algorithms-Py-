@@ -2,8 +2,12 @@
 
 import random
 
-matrix = [[random.randint(0, 100) for _ in range(4)] for _ in range(4)]
-minimum_values = [0]*4
+START = 0
+STOP = 100
+SIZE = 4
+
+matrix = [[random.randint(START, STOP) for _ in range(SIZE)] for _ in range(SIZE)]
+minimum_values = [0]*SIZE
 
 for line in matrix:
 
@@ -15,11 +19,11 @@ for line in matrix:
 
 n = 0
 
-while n < 4:
+while n < SIZE:
     i = 0
-    minimum = 100
+    minimum = STOP
 
-    while i < 4:
+    while i < SIZE:
         if matrix[i][n] < minimum:
             minimum = matrix[i][n]
             minimum_values[n] = matrix[i][n]
