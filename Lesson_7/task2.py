@@ -10,7 +10,7 @@ def merge_sort(arr):
         return arr
 
     elif len(arr) > 1:
-        array = [0 for i in range(len(arr))]
+        array = [0]*len(arr)
         length = len(arr) // 2
 
         list_left = arr[:length]
