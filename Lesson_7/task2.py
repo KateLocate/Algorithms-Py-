@@ -25,25 +25,25 @@ def merge_sort(arr):
         while i < len(list_left_sorted) and j < len(list_right_sorted):
             if list_left_sorted[i] < list_right_sorted[j]:
                 array[k] = list_left_sorted[i]
-                i = i + 1
+                i += 1
             else:
                 array[k] = list_right_sorted[j]
-                j = j + 1
-            k = k + 1
+                j += 1
+            k += 1
 
         while i < len(list_left_sorted):
             array[k] = list_left_sorted[i]
-            i = i + 1
-            k = k + 1
+            i += 1
+            k += 1
 
         while j < len(list_right_sorted):
             array[k] = list_right_sorted[j]
-            j = j + 1
-            k = k + 1
+            j += 1
+            k += 1
 
         return array
 
 
-array = [round(random.uniform(0, 49), 2) for i in range(7)]
+array = [round(random.uniform(0, 50), 2) for i in range(7)]
 print(array)
 print(merge_sort(array))
